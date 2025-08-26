@@ -256,6 +256,19 @@ const config = {
         remarkPlugins: [npm2yarnPlugin],
       },
     ],
+
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'embedded-wallets',
+        path: 'embedded-wallets',
+        routeBasePath: 'embedded-wallets',
+        editUrl: 'https://github.com/MetaMask/metamask-docs/edit/main/',
+        sidebarPath: require.resolve('./ew-sidebar.js'),
+        breadcrumbs: false,
+        remarkPlugins: [npm2yarnPlugin],
+      },
+    ],
     './src/plugins/plugin-json-rpc.ts',
     // Custom Segment plugin for controlled analytics
     './src/plugins/segment',
@@ -420,6 +433,10 @@ const config = {
               {
                 label: 'Delegation Toolkit',
                 to: '/delegation-toolkit',
+              },
+              {
+                label: 'Embedded Wallets',
+                to: '/embedded-wallets',
               },
               {
                 label: 'Snaps',

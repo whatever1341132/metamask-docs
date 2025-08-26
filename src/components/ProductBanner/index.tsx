@@ -1,6 +1,6 @@
-import React, {type ReactNode, useEffect, useState} from 'react';
-import {useLocation} from '@docusaurus/router';
-import {useThemeConfig} from '@docusaurus/theme-common';
+import React, { type ReactNode, useEffect, useState } from 'react';
+import { useLocation } from '@docusaurus/router';
+import { useThemeConfig } from '@docusaurus/theme-common';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 
@@ -13,6 +13,10 @@ const PRODUCT_CONFIGS: Record<string, ProductConfig> = {
   '/sdk/': {
     name: 'MetaMask SDK documentation',
     description: 'Seamlessly connect to the MetaMask extension and mobile app.',
+  },
+  '/embedded-wallets/': {
+    name: 'Embedded Wallets documentation',
+    description: 'Onboard power users and first-time users in seconds via social logins, passkeys, or by integrating your own authentication providers.',
   },
   '/wallet/': {
     name: 'Wallet API documentation',
@@ -48,7 +52,7 @@ function getProductConfig(pathname: string): ProductConfig | null {
 export default function ProductBanner(): ReactNode | null {
   const location = useLocation();
   const productConfig = getProductConfig(location.pathname);
-  const {navbar} = useThemeConfig();
+  const { navbar } = useThemeConfig();
   const [isNavbarPresent, setIsNavbarPresent] = useState(true);
 
   useEffect(() => {
@@ -71,7 +75,7 @@ export default function ProductBanner(): ReactNode | null {
   }
 
   return (
-    <div 
+    <div
       className={clsx(
         styles.productBanner,
         !isNavbarPresent && styles.productBannerNoNavbar

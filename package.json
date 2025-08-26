@@ -68,6 +68,7 @@
     "react-dropdown-select": "^4.12.2",
     "react-modal": "^3.16.3",
     "react-player": "^3.3.1",
+    "react-select": "^5.10.2",
     "react-tippy": "^1.4.0",
     "remark-codesandbox": "^0.10.1",
     "remark-docusaurus-tabs": "^0.2.0",
